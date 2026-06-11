@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#081525"/>
+      <stop offset="1" stop-color="#102b48"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#38bdf8"/>
+      <stop offset=".55" stop-color="#0099ff"/>
+      <stop offset="1" stop-color="#ff6b00"/>
+    </linearGradient>
+    <pattern id="grid" width="58" height="58" patternUnits="userSpaceOnUse">
+      <path d="M58 0H0V58" fill="none" stroke="#94a3b8" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="980" cy="110" r="300" fill="#0099ff" opacity=".08"/>
+  <circle cx="1080" cy="570" r="260" fill="#ff6b00" opacity=".07"/>
+  <g transform="translate(85 80)">
+    <rect width="86" height="86" rx="24" fill="#0b1c30" stroke="#0099ff" stroke-opacity=".4"/>
+    <text x="18" y="61" fill="#0099ff" font-family="Arial, sans-serif" font-size="52" font-weight="900">S</text>
+    <text x="47" y="61" fill="#ff6b00" font-family="Arial, sans-serif" font-size="52" font-weight="900">T</text>
+    <text x="110" y="49" fill="#ffffff" font-family="Arial, sans-serif" font-size="43" font-weight="900">STARK</text>
+    <text x="264" y="49" fill="#ff6b00" font-family="Arial, sans-serif" font-size="43" font-weight="900">TECH</text>
+    <text x="112" y="76" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4">DESARROLLO DE SOFTWARE</text>
+  </g>
+  <text x="85" y="290" fill="#ffffff" font-family="Arial, sans-serif" font-size="68" font-weight="900">Software que impulsa</text>
+  <text x="85" y="370" fill="url(#accent)" font-family="Arial, sans-serif" font-size="68" font-weight="900">tu operación.</text>
+  <text x="85" y="455" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25">Aplicaciones web · Integraciones · Automatización · Inteligencia artificial</text>
+  <rect x="85" y="510" width="245" height="52" rx="14" fill="#0099ff"/>
+  <text x="117" y="544" fill="#ffffff" font-family="Arial, sans-serif" font-size="19" font-weight="700">starktech.co</text>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "name": "STARKTECH Software & Marketing",
+  "short_name": "STARKTECH",
+  "description": "Desarrollo de software, integraciones, automatización e inteligencia artificial para empresas.",
+  "lang": "es-CO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#081525",
+  "theme_color": "#081525",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,1 +1,238 @@
 @import "tailwindcss";
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  position: relative;
+  display: grid;
+  width: 2.55rem;
+  height: 2.55rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 0.8rem;
+  background: linear-gradient(145deg, #102b48, #081525);
+  box-shadow: 0 0 0 1px rgb(0 153 255 / 8%), 0 10px 25px rgb(0 0 0 / 18%);
+  isolation: isolate;
+}
+
+.brand-mark::before {
+  position: absolute;
+  inset: -60%;
+  background: conic-gradient(from 180deg, transparent 0 36%, rgb(0 153 255 / 60%) 45%, rgb(255 107 0 / 55%) 52%, transparent 62%);
+  content: "";
+  animation: brand-orbit 7s linear infinite;
+}
+
+.brand-mark::after {
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: calc(0.8rem - 1px);
+  background: #0b1c30;
+  content: "";
+}
+
+.brand-mark-s,
+.brand-mark-t {
+  position: absolute;
+  font-size: 1.35rem;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: -0.18em;
+}
+
+.brand-mark-s {
+  left: 0.49rem;
+  color: #0099ff;
+}
+
+.brand-mark-t {
+  right: 0.52rem;
+  color: #ff6b00;
+}
+
+.brand-mark-spark {
+  position: absolute;
+  right: 0.42rem;
+  bottom: 0.44rem;
+  width: 0.22rem;
+  height: 0.22rem;
+  border-radius: 999px;
+  background: #ff6b00;
+  box-shadow: 0 0 10px #ff6b00;
+  animation: brand-pulse 2.4s ease-in-out infinite;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name {
+  font-size: 1.03rem;
+  font-weight: 950;
+  letter-spacing: -0.055em;
+}
+
+.brand-tagline {
+  margin-top: 0.3rem;
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.brand-logo:hover .brand-mark {
+  transform: translateY(-1px);
+  transition: transform 180ms ease;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgb(148 163 184 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(148 163 184 / 5%) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.hero-gradient {
+  color: transparent;
+  background: linear-gradient(100deg, #38bdf8 5%, #0099ff 48%, #ff6b00 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.typewriter-line {
+  display: block;
+  min-height: 1.96em;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 0.04em;
+  color: #ff6b00;
+  -webkit-text-fill-color: #ff6b00;
+  animation: typewriter-blink 850ms step-end infinite;
+}
+
+.hero-copy {
+  animation: hero-enter 700ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+.hero-product {
+  animation: product-enter 850ms 120ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+.gaia-hero-image {
+  transform: scale(1.01);
+  transition: transform 700ms cubic-bezier(.2,.8,.2,1), filter 700ms ease;
+}
+
+.hero-product:hover .gaia-hero-image {
+  filter: saturate(1.06);
+  transform: scale(1.035);
+}
+
+.scan-line {
+  top: 18%;
+  animation: scan-document 3s ease-in-out infinite;
+}
+
+.gaia-chat-avatar {
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.gaia-chat-avatar img {
+  transform: scale(2.65);
+  object-position: 50% 31%;
+}
+
+.gaia-chat-panel {
+  animation: chat-enter 220ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+@keyframes brand-orbit {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes brand-pulse {
+  50% { opacity: 0.45; transform: scale(0.7); }
+}
+
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes product-enter {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes scan-document {
+  50% { top: 82%; }
+}
+
+@keyframes chat-enter {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes typewriter-blink {
+  50% { opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .brand-tagline {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
